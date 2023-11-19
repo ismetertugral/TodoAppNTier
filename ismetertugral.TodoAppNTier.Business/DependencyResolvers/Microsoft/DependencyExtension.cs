@@ -19,7 +19,7 @@ namespace ismetertugral.TodoAppNTier.Business.DependencyResolvers.Microsoft
         {
             services.AddDbContext<TodoContext>(opt =>
             {
-                opt.UseSqlServer("server=ISMETERTUGRALNB\\SQLEXPRESS;database=TodoDb;integrated security=true;TrustServerCertificate=true;");
+                opt.UseSqlServer("server=(localdb)\\MSSQLLocalDB;database=TodoDb;integrated security=true;TrustServerCertificate=true;");
                 opt.LogTo(Console.WriteLine,LogLevel.Information);
             });
 
